@@ -75,20 +75,12 @@ class PlayVideoPageState extends State<PlayVideoPage> {
     // });
     await _flutterFFmpegConfig.registerNewFFmpegPipe().then((val) async {
       try {
-        var arguments = [
-          "-i",
-          'assets/videos/file.txt',
-          "-c:v",
-          "mpeg4",
-          "output.mp4"
-        ];
+        var arguments = ["-i", 'assets/videos/file.txt', "-c:v", "mpeg4", "output.mp4"];
         await _flutterFFmpeg.executeWithArguments(arguments).then((rc) {
           debugPrint("result ${rc == 0 ? true : false}");
           debugPrint("______PIPE ADDRESS______ = $val");
         });
-        _flutterFFmpegConfig
-            .getLastCommandOutput()
-            .then((output) => print("Last command output: $output"));
+        _flutterFFmpegConfig.getLastCommandOutput().then((output) => print("Last command output: $output"));
       } catch (e) {
         print(e);
       }
@@ -277,7 +269,7 @@ class PlayVideoPageState extends State<PlayVideoPage> {
                     color: Colors.black12,
                     offset: Offset(0.0, 10.0),
                     blurRadius: 10,
-                  )
+                  ),
                 ]),
             child: IconButton(
               icon: FaIcon(icon),
