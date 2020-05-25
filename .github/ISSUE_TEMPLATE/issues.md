@@ -1,7 +1,7 @@
 ---
 name: Issues
 about: Open request
-title: Issues
+title: ''
 labels: ''
 assignees: ''
 
@@ -11,8 +11,4 @@ assignees: ''
 
 # Todo
 
-# Screen shot
-
-#Check List
-[ ] Test on real devices
-[ ] Format code
+# Document
