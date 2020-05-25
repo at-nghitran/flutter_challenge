@@ -40,7 +40,7 @@ class ListItemPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Text('$description')
+            Text('$description'),
           ],
         ),
       ),
